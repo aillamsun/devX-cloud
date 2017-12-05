@@ -1,0 +1,38 @@
+# application name
+spring:
+  application:
+    name: devx-monitor
+
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+      turbine:
+        clusters: jscloud
+        location: turbine
+
+#端口
+server:
+  port: 4000
+
+# 安全配置
+security:
+  user:
+    name: admin
+    password: 123456
+    role: USER
+  basic:
+    enabled: true
+
+
+# eureka 配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@localhost:8671/eureka/
+
+  instance:
+    #使用IP
+    prefer-ip-address: false
+    #自定义 instance id 默认是 ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    #instance-id:
