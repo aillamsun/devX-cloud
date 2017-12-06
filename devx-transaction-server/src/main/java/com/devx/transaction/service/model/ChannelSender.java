@@ -1,9 +1,9 @@
-package com.lorne.tx.service.model;
+package com.devx.transaction.service.model;
 
+import com.devx.transaction.utils.SocketUtils;
 import com.lorne.core.framework.utils.http.HttpUtils;
 import com.lorne.core.framework.utils.task.IBack;
 import com.lorne.core.framework.utils.task.Task;
-import com.lorne.tx.utils.SocketUtils;
 import io.netty.channel.Channel;
 import org.apache.commons.lang.StringUtils;
 

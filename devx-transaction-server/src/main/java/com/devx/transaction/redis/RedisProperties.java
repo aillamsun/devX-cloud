@@ -1,4 +1,4 @@
-package com.lorne.tx.redis;
+package com.devx.transaction.redis;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;

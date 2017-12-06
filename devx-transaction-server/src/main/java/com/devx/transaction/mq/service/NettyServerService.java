@@ -1,4 +1,4 @@
-package com.lorne.tx.mq.service;
+package com.devx.transaction.mq.service;
 
 /**
  * Created by lorne on 2017/6/30.

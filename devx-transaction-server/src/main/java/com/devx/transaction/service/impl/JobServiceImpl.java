@@ -1,7 +1,7 @@
-package com.lorne.tx.service.impl;
+package com.devx.transaction.service.impl;
 
-import com.lorne.tx.service.JobService;
-import com.lorne.tx.service.TxManagerService;
+import com.devx.transaction.service.JobService;
+import com.devx.transaction.service.TxManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * create by lorne on 2017/8/8
  */
 @Service
-public class JobServiceImpl implements JobService{
+public class JobServiceImpl implements JobService {
 
     @Autowired
     private TxManagerService txManagerService;

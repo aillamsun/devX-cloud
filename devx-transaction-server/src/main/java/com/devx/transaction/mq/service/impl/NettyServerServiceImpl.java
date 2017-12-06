@@ -1,9 +1,9 @@
-package com.lorne.tx.mq.service.impl;
+package com.devx.transaction.mq.service.impl;
 
-import com.lorne.tx.Constants;
-import com.lorne.tx.mq.handler.TxCoreServerHandler;
-import com.lorne.tx.mq.service.MQTxManagerService;
-import com.lorne.tx.mq.service.NettyServerService;
+import com.devx.transaction.Constants;
+import com.devx.transaction.mq.handler.TxCoreServerHandler;
+import com.devx.transaction.mq.service.MQTxManagerService;
+import com.devx.transaction.mq.service.NettyServerService;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;

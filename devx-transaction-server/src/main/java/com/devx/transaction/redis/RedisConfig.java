@@ -1,4 +1,4 @@
-package com.lorne.tx.redis;
+package com.devx.transaction.redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

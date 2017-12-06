@@ -1,6 +1,6 @@
-package com.lorne.tx.listener;
+package com.devx.transaction.listener;
 
-import com.lorne.tx.service.InitService;
+import com.devx.transaction.service.InitService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -22,8 +22,7 @@ public class ServerListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent event) {
-        springContext = WebApplicationContextUtils
-                .getWebApplicationContext(event.getServletContext());
+        springContext = WebApplicationContextUtils.getWebApplicationContext(event.getServletContext());
         initService = springContext.getBean(InitService.class);
         initService.start();
     }

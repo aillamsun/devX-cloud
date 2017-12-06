@@ -1,4 +1,4 @@
-package com.lorne.tx;
+package com.devx.transaction;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;

@@ -1,8 +1,8 @@
-package com.lorne.tx.mq.service.impl;
+package com.devx.transaction.mq.service.impl;
 
-import com.lorne.tx.service.TxManagerService;
-import com.lorne.tx.mq.model.TxGroup;
-import com.lorne.tx.mq.service.MQTxManagerService;
+import com.devx.transaction.mq.model.TxGroup;
+import com.devx.transaction.mq.service.MQTxManagerService;
+import com.devx.transaction.service.TxManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

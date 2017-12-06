@@ -1,8 +1,8 @@
-package com.lorne.tx.controller;
+package com.devx.transaction.controller;
 
-import com.lorne.tx.service.model.TxServer;
-import com.lorne.tx.service.model.TxState;
-import com.lorne.tx.service.TxService;
+import com.devx.transaction.service.TxService;
+import com.devx.transaction.service.model.TxServer;
+import com.devx.transaction.service.model.TxState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

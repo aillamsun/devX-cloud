@@ -1,7 +1,7 @@
-package com.lorne.tx.service;
+package com.devx.transaction.service;
 
-import com.lorne.tx.service.model.TxServer;
-import com.lorne.tx.service.model.TxState;
+import com.devx.transaction.service.model.TxServer;
+import com.devx.transaction.service.model.TxState;
 
 /**
  * Created by lorne on 2017/7/1.
@@ -12,7 +12,7 @@ public interface TxService {
 
     TxState getState();
 
-    String sendMsg(String model,String msg);
+    String sendMsg(String model, String msg);
 
     boolean checkClearGroup(String groupId, String taskId, int isGroup);
 

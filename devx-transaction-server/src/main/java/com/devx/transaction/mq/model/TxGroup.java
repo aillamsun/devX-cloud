@@ -1,4 +1,4 @@
-package com.lorne.tx.mq.model;
+package com.devx.transaction.mq.model;
 
 
 import com.alibaba.fastjson.JSONArray;

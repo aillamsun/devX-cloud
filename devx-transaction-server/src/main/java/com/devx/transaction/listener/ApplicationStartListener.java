@@ -1,6 +1,6 @@
-package com.lorne.tx.listener;
+package com.devx.transaction.listener;
 
-import com.lorne.tx.Constants;
+import com.devx.transaction.Constants;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerInitializedEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;

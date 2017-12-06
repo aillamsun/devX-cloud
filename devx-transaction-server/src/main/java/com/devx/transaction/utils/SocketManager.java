@@ -1,6 +1,6 @@
-package com.lorne.tx.utils;
+package com.devx.transaction.utils;
 
-import com.lorne.tx.Constants;
+import com.devx.transaction.Constants;
 import io.netty.channel.Channel;
 
 import java.util.List;

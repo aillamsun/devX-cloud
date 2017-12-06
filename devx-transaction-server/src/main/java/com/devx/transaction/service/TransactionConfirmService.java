@@ -1,6 +1,7 @@
-package com.lorne.tx.service;
+package com.devx.transaction.service;
 
-import com.lorne.tx.mq.model.TxGroup;
+
+import com.devx.transaction.mq.model.TxGroup;
 
 /**
  * Created by lorne on 2017/6/9.

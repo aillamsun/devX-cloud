@@ -9,12 +9,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableEurekaClient
-public class TxManagerApplication {
+public class DevxTransactionBootstrap {
 
 
 
     public static void main(String[] args) {
-        SpringApplication.run(TxManagerApplication.class, args);
+        SpringApplication.run(DevxTransactionBootstrap.class, args);
     }
 
 }

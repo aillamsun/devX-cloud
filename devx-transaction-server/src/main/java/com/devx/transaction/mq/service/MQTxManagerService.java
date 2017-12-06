@@ -1,6 +1,7 @@
-package com.lorne.tx.mq.service;
+package com.devx.transaction.mq.service;
 
-import com.lorne.tx.mq.model.TxGroup;
+
+import com.devx.transaction.mq.model.TxGroup;
 
 /**
  * Created by lorne on 2017/6/7.
@@ -20,13 +21,13 @@ public interface MQTxManagerService {
      *
      * @return
      */
-    TxGroup addTransactionGroup(String groupId,String uniqueKey, String taskId,int isGroup, String modelName);
+    TxGroup addTransactionGroup(String groupId, String uniqueKey, String taskId, int isGroup, String modelName);
 
 
-    int checkTransactionGroup(String groupId,String taskId);
+    int checkTransactionGroup(String groupId, String taskId);
 
 
-    boolean closeTransactionGroup(String groupId,int state);
+    boolean closeTransactionGroup(String groupId, int state);
 
 
 
