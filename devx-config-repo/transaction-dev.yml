@@ -13,9 +13,9 @@ server:
 #redis主机地址
   redis:
     #redis主机端口
-    host: 43.254.3.68
-    port: 3697
-    password: Chinawiservqz#
+    host: localhost
+    port: 6379
+#    password: Chinawiservqz#
     timeout: 0
     pool:
       max-active: 10
