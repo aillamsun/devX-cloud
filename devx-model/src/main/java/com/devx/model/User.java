@@ -1,9 +1,14 @@
-package com.chinawiserv.generator.model;
+package com.devx.model;
 
+import com.devx.core.model.BaseModel;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
-public class User {
+public class User  extends BaseModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

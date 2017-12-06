@@ -1,9 +1,11 @@
-package com.chinawiserv.generator.model;
+package com.devx.model;
+
+import com.devx.core.model.BaseModel;
 
 import javax.persistence.*;
 
 @Table(name = "role_permission")
-public class RolePermission {
+public class RolePermission  extends BaseModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
