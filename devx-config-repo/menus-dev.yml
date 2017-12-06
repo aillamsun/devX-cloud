@@ -1,7 +1,6 @@
 server:
   port: 8092
   context-path:
-
   tomcat:
     uri-encoding: UTF-8
     max-threads: 800
@@ -10,7 +9,7 @@ server:
 show-exception: true
 
 
-log.path: /Users/sungang/Documents/logs/devx-user
+log.path: /Users/sungang/Documents/logs/devx-menus
 log.level: INFO
 #日志最多保留天数
 log.maxHistory: 1
@@ -76,8 +75,6 @@ spring:
     #useGlobalDataSourceStat: true
 
 
-
-
 hystrix:
   command:
     default:
@@ -111,7 +108,7 @@ eureka:
       lease-renewal-interval-in-seconds: 10
       # 续约到期时间（默认90秒）
       lease-expiration-duration-in-seconds: 30
-      # 自定义instance-id
+       # 自定义instance-id
       instance-id: ${spring.application.name}:${server.port}:${random.value}
     client:
       service-url:
