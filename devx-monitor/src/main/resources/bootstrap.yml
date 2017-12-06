@@ -1,0 +1,21 @@
+# application name
+spring:
+  application:
+    name: monitor
+  cloud:
+    config:
+#      discovery:
+#        service-id: config
+#        enabled: true
+      uri: http://localhost:8888
+      fail-fast: true
+      username: ${security.user.name}
+      password: ${security.user.password}
+      name: monitor
+      profile: dev
+      # 重试
+      retry:
+        initial-interval: 2000
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10
