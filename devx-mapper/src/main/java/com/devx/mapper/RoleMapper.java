@@ -1,7 +1,8 @@
-package com.chinawiserv.generator.mapper;
+package com.devx.mapper;
 
-import com.chinawiserv.core.dao.mybatis.BaseMapper;
-import com.chinawiserv.generator.model.Role;
+
+import com.devx.core.dao.mybatis.BaseMapper;
+import com.devx.model.Role;
 
 public interface RoleMapper extends BaseMapper<Role> {
 }

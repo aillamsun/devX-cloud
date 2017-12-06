@@ -1,7 +1,7 @@
-package com.chinawiserv.generator.mapper;
+package com.devx.mapper;
 
-import com.chinawiserv.core.dao.mybatis.BaseMapper;
-import com.chinawiserv.generator.model.Permission;
+import com.devx.core.dao.mybatis.BaseMapper;
+import com.devx.model.Permission;
 
 public interface PermissionMapper extends BaseMapper<Permission> {
 }
