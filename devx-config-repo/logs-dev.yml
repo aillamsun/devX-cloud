@@ -76,12 +76,6 @@ spring:
     #useGlobalDataSourceStat: true
 
 
-
-
-management:
-  security:
-    enabled: false
-
 hystrix:
   command:
     default:
@@ -115,6 +109,8 @@ eureka:
       lease-renewal-interval-in-seconds: 10
       # 续约到期时间（默认90秒）
       lease-expiration-duration-in-seconds: 30
+      # 自定义instance-id
+      instance-id: ${spring.application.name}:${server.port}:${random.value}
     client:
       service-url:
         # defaultZone: http://localhost:8761/eureka/
@@ -123,7 +119,15 @@ eureka:
       healthcheck:
         enabled: true
       eurekaServiceUrlPollIntervalSeconds: 60
+      enabled: true
 
+
+#actuator暴露的health接口权限是由两个配置:
+#actuator是否需要安全保证
+management:
+  security:
+    enabled: false
+#actuator的health接口是否需要安全保证
 endpoints:
   health:
     sensitive: false

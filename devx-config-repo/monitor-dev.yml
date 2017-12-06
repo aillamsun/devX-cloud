@@ -13,15 +13,6 @@ security:
 
 # eureka 配置
 eureka:
-  client:
-    service-url:
-      # defaultZone: http://localhost:8761/eureka/
-      # docker 部署开启
-      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8671/eureka/
-    healthcheck:
-      enabled: true
-    eurekaServiceUrlPollIntervalSeconds: 60
-
   instance:
     hostname: localhost
     statusPageUrlPath: /info
@@ -33,6 +24,17 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     # 续约到期时间（默认90秒）
     lease-expiration-duration-in-seconds: 30
+     # 自定义instance-id
+    instance-id: ${spring.application.name}:${server.port}:${random.value}
+  client:
+    service-url:
+      # defaultZone: http://localhost:8761/eureka/
+      # docker 部署开启
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8671/eureka/
+    healthcheck:
+      enabled: true
+    eurekaServiceUrlPollIntervalSeconds: 60
+    enabled: true
 
 
 logging:
@@ -57,3 +59,5 @@ spring:
         turbine:
           clusters: default
           location: http://localhost:${turbine.stream.port}
+
+
