@@ -10,7 +10,7 @@ server:
 show-exception: true
 
 
-log.path: /Users/sungang/Documents/logs/devx-user
+log.path: /Users/sungang/Documents/logs/devx-role
 log.level: INFO
 #日志最多保留天数
 log.maxHistory: 1
