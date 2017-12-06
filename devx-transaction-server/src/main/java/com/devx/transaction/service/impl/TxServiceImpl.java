@@ -17,6 +17,7 @@ import com.lorne.core.framework.utils.task.Task;
 import com.netflix.appinfo.ApplicationInfoManager;
 import com.netflix.appinfo.EurekaInstanceConfig;
 import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.DiscoveryManager;
 import com.netflix.eureka.EurekaServerContext;
 import com.netflix.eureka.EurekaServerContextHolder;
 import io.netty.channel.Channel;
@@ -105,10 +106,14 @@ public class TxServiceImpl implements TxService {
     @Override
     public TxState getState() {
         TxState state = new TxState();
-        EurekaServerContextHolder holder = EurekaServerContextHolder.getInstance();
-        EurekaServerContext serverContext = holder.getServerContext();
-        ApplicationInfoManager infoManager = serverContext.getApplicationInfoManager();
-        EurekaInstanceConfig instanceConfig = infoManager.getEurekaInstanceConfig();
+        //修改
+//        EurekaServerContextHolder holder = EurekaServerContextHolder.getInstance();
+//        EurekaServerContext serverContext = holder.getServerContext();
+//        ApplicationInfoManager infoManager = serverContext.getApplicationInfoManager();
+//        EurekaInstanceConfig instanceConfig = infoManager.getEurekaInstanceConfig();
+
+        //获取
+        EurekaInstanceConfig instanceConfig = DiscoveryManager.getInstance().getEurekaClient().getApplicationInfoManager().getEurekaInstanceConfig();
         String ipAddress = instanceConfig.getIpAddress();
         if (!isIp(ipAddress)) {
             ipAddress = "127.0.0.1";
