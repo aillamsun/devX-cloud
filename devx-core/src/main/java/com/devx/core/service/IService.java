@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.chinawiserv.core.service;
+package com.devx.core.service;
 
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Condition;

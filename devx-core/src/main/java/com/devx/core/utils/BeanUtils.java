@@ -1,4 +1,4 @@
-package com.chinawiserv.core.utils;
+package com.devx.core.utils;
 
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.lang3.StringUtils;

@@ -1,4 +1,4 @@
-package com.chinawiserv.core.constants;
+package com.devx.core.constants;
 
 /**
  * Created with IntelliJ IDEA.

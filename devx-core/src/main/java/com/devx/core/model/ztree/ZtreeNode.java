@@ -1,4 +1,4 @@
-package com.devx.utils.ztree;
+package com.devx.core.model.ztree;
 
 import java.io.Serializable;
 

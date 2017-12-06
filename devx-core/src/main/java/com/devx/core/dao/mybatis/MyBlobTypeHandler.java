@@ -1,4 +1,4 @@
-package com.chinawiserv.core.dao.mybatis;
+package com.devx.core.dao.mybatis;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;

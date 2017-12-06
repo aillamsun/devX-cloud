@@ -1,4 +1,4 @@
-package com.chinawiserv.core.annotation;
+package com.devx.core.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

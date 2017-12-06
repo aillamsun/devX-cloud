@@ -1,4 +1,4 @@
-package com.chinawiserv.core.enums;
+package com.devx.core.enums;
 
 /**
  * 应用系统级别的错误码

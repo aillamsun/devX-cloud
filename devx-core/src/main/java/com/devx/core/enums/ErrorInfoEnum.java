@@ -1,4 +1,4 @@
-package com.chinawiserv.core.enums;
+package com.devx.core.enums;
 
 /**
  * Created by sungang on 2017/5/19.

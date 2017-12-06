@@ -1,4 +1,4 @@
-package com.chinawiserv.core.dao.mybatis;
+package com.devx.core.dao.mybatis;
 
 /**
  * Created by sungang on 2017/3/29.

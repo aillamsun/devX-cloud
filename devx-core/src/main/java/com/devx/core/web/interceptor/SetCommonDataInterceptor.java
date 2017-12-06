@@ -1,6 +1,6 @@
-package com.chinawiserv.core.web.interceptor;
+package com.devx.core.web.interceptor;
 
-import com.chinawiserv.core.constants.Constants;
+import com.devx.core.constants.Constants;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.PathMatcher;
 import org.springframework.util.StringUtils;

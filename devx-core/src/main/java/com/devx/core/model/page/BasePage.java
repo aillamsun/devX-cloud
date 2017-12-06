@@ -1,4 +1,4 @@
-package com.chinawiserv.core.model.page;
+package com.devx.core.model.page;
 
 import java.io.Serializable;
 import java.util.List;

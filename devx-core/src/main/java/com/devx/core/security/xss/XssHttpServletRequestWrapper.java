@@ -1,4 +1,4 @@
-package com.chinawiserv.core.security.xss;
+package com.devx.core.security.xss;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;

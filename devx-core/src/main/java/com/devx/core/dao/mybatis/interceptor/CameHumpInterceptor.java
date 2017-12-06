@@ -1,4 +1,4 @@
-package com.chinawiserv.core.dao.mybatis.interceptor;
+package com.devx.core.dao.mybatis.interceptor;
 
 import org.apache.ibatis.executor.resultset.ResultSetHandler;
 import org.apache.ibatis.plugin.*;

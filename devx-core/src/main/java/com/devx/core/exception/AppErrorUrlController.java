@@ -1,7 +1,7 @@
-package com.chinawiserv.core.exception;
+package com.devx.core.exception;
 
-import com.chinawiserv.core.response.ResultBody;
-import com.chinawiserv.core.response.ResultGenerator;
+import com.devx.core.response.ResultBody;
+import com.devx.core.response.ResultGenerator;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

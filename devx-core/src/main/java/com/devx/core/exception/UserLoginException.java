@@ -1,6 +1,7 @@
-package com.chinawiserv.core.exception;
+package com.devx.core.exception;
 
-import com.chinawiserv.core.enums.ErrorInfo;
+
+import com.devx.core.enums.ErrorInfo;
 
 /**
  * Created by sungang on 2017/9/18.

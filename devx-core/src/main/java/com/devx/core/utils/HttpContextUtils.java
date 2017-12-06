@@ -1,4 +1,4 @@
-package com.chinawiserv.core.utils;
+package com.devx.core.utils;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

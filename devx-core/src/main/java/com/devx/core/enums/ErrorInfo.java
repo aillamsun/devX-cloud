@@ -1,4 +1,4 @@
-package com.chinawiserv.core.enums;
+package com.devx.core.enums;
 
 /**
  * 错误码接口

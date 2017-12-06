@@ -1,4 +1,4 @@
-package com.chinawiserv.core.dao.mybatis;
+package com.devx.core.dao.mybatis;
 
 import tk.mybatis.mapper.common.ConditionMapper;
 import tk.mybatis.mapper.common.IdsMapper;

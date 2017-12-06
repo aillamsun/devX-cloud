@@ -1,7 +1,7 @@
-package com.chinawiserv.core.security.xss;
+package com.devx.core.security.xss;
 
-import com.chinawiserv.core.enums.GlobalErrorInfoEnum;
-import com.chinawiserv.core.exception.GlobalErrorInfoException;
+import com.devx.core.enums.GlobalErrorInfoEnum;
+import com.devx.core.exception.GlobalErrorInfoException;
 import org.apache.commons.lang3.StringUtils;
 
 /**

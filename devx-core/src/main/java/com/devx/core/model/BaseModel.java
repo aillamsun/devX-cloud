@@ -1,4 +1,4 @@
-package com.chinawiserv.core.model;
+package com.devx.core.model;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

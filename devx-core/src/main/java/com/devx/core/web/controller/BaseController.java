@@ -1,4 +1,4 @@
-package com.chinawiserv.core.web.controller;
+package com.devx.core.web.controller;
 
 /**
  * Created by sungang on 2016/8/29.

@@ -1,4 +1,4 @@
-package com.chinawiserv.core.model;
+package com.devx.core.model;
 
 import lombok.Data;
 

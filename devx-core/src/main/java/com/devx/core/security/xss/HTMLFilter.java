@@ -1,4 +1,4 @@
-package com.chinawiserv.core.security.xss;
+package com.devx.core.security.xss;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package com.chinawiserv.core.utils;
+package com.devx.core.utils;
 
 import org.springframework.context.MessageSource;
 

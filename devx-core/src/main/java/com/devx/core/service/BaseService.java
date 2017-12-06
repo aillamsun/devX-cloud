@@ -1,6 +1,6 @@
-package com.chinawiserv.core.service;
+package com.devx.core.service;
 
-import com.chinawiserv.core.dao.mybatis.BaseMapper;
+import com.devx.core.dao.mybatis.BaseMapper;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;

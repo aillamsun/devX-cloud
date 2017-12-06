@@ -1,7 +1,7 @@
-package com.chinawiserv.core.response;
+package com.devx.core.response;
 
-import com.chinawiserv.core.enums.ErrorInfo;
-import com.chinawiserv.core.enums.GlobalErrorInfoEnum;
+import com.devx.core.enums.ErrorInfo;
+import com.devx.core.enums.GlobalErrorInfoEnum;
 
 import java.io.Serializable;
 
