@@ -1,10 +1,7 @@
 server:
   port: 8044
 
-spring:
-  thymeleaf:
-    prefix: classpath:/html/
-    suffix: .html
+
 
 ##redis 集群环境配置
 ##redis cluster
