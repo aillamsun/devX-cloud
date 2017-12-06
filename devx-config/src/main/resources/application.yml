@@ -1,0 +1,43 @@
+# application name
+spring:
+  application:
+    name: devx-center
+
+#端口
+server:
+  port: 8671
+
+# 安全配置
+security:
+  user:
+    name: admin
+    password: 123456
+  basic:
+    enabled: true
+
+# eureka 配置
+eureka:
+  client:
+    #表示是否将自己注册到Eureka Server，默认为true。由于当前这个应用就是Eureka Server，故而设为false。
+    register-with-eureka: true
+    #表示是否从Eureka Server获取注册信息，默认为true。因为这是一个单点的Eureka Server，不需要同步其他的Eureka Server节点的数据，故而设为 false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@localhost:${server.port}/eureka/
+
+
+  server:
+    enable-self-preservation: true # 设为false，关闭自我保护主要 默认true
+    eviction-interval-timer-in-ms: 4000 #清理实例间隔（单位毫秒，默认是60*1000） 4秒
+
+  instance:
+    #使用IP
+    prefer-ip-address: false
+    #自定义 instance id 默认是 ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    #instance-id:
+
+
+  dashboard: #自定义 eureka  dashboard path
+    enabled: true
+    path:
+
