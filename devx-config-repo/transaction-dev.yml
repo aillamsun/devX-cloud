@@ -1,0 +1,39 @@
+server:
+  port: 8044
+
+spring:
+  thymeleaf:
+    prefix: classpath:/html/
+    suffix: .html
+
+##redis 集群环境配置
+##redis cluster
+#spring.redis.cluster.nodes=127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+#spring.redis.cluster.commandTimeout=5000
+
+##redis 单点环境配置
+#redis
+#redis主机地址
+  redis:
+    #redis主机端口
+    host: 43.254.3.68
+    port: 3697
+    password: Chinawiservqz#
+    timeout: 0
+    pool:
+      max-active: 10
+      max-wait: 1
+      max-idle: 5
+      min-idle: 0
+
+
+#业务模块与TxManager之间通讯的最大等待时间（单位：秒）
+transaction_netty_delay_time: 3
+#业务模块与TxManager之间通讯的心跳时间（单位：秒）
+transaction_netty_heart_time:  15
+#存储到redis下的数据最大保存时间（单位：秒）
+redis_save_max_time: 30
+#socket server Socket对外服务端口
+socket.port: 9999
+# 最大socket连接数
+socket.max.connection: 100

@@ -1,0 +1,18 @@
+server:
+  port: 8060
+
+
+zuul:
+  ignoredServices: '*'
+  sensitive-headers:
+  prefix: /v1 #为zuul设置一个公共的前缀
+
+  #路由
+  routes:
+    auth-service:
+      path: /uaa/**
+      stripPrefix: false
+#    user-service:
+#      path: /svca/**
+#    svcb-service:
+#      path: /svcb/**
