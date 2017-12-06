@@ -7,15 +7,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>user-service[用户服务]</artifactId>
+    <artifactId>user-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>user-service</name>
+    <name>user-service[用户服务]</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
 
     <dependencies>
 

@@ -1,70 +1,20 @@
 # application name
 spring:
   application:
-    name: logs
+    name: menus
   cloud:
     config:
-      discovery:
-        service-id: config
-        enabled: true
-#      uri: http://localhost:8888
+#      discovery:
+#        service-id: config
+#        enabled: true
+      uri: http://localhost:8888
       fail-fast: true
       username: ${security.user.name}
       password: ${security.user.password}
-      name: transaction
+      name: menus
       profile: dev
       retry:
         initial-interval: 2000
         max-interval: 10000
         multiplier: 2
         max-attempts: 10
-
-
-management:
-  security:
-    enabled: false
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
-ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
-
-
-# 安全配置
-security:
-  user:
-    name: admin
-    password: 123456
-  basic:
-    enabled: true
-
-eureka:
-    instance:
-      hostname: localhost
-      statusPageUrlPath: /info
-      healthCheckUrlPath: /health
-      #docker 部署开启
-      prefer-ip-address: true
-      #ip-address: 127.0.0.1
-    server:
-      peerEurekaNodesUpdateIntervalMs: 60000
-      enableSelfPreservation: false
-    client:
-      service-url:
-        # defaultZone: http://localhost:8761/eureka/
-        # docker 部署开启
-        defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8671/eureka/
-      healthcheck:
-        enabled: true
-      eurekaServiceUrlPollIntervalSeconds: 60
-
-endpoints:
-  health:
-    sensitive: false
