@@ -4,10 +4,10 @@ spring:
     name: user
   cloud:
     config:
-      discovery:
-        service-id: config
-        enabled: true
-#      uri: http://localhost:8888
+#      discovery:
+#        service-id: config
+#        enabled: true
+      uri: http://localhost:8888
       fail-fast: true
       username: ${security.user.name}
       password: ${security.user.password}
