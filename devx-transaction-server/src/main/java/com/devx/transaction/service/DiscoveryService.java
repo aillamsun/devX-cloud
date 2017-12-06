@@ -25,7 +25,7 @@ import java.util.List;
 public class DiscoveryService {
 
 
-    private final static String  tmKey = "tx-manager";
+    private final static String  tmKey = "transaction";
 
     /** logger */
     private static final Logger LOGGER = LoggerFactory.getLogger(DiscoveryService.class);

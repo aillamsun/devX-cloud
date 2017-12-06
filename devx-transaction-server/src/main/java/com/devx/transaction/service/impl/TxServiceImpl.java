@@ -14,7 +14,10 @@ import com.devx.transaction.utils.SocketUtils;
 import com.lorne.core.framework.utils.task.ConditionUtils;
 import com.lorne.core.framework.utils.task.IBack;
 import com.lorne.core.framework.utils.task.Task;
+import com.netflix.appinfo.ApplicationInfoManager;
+import com.netflix.appinfo.EurekaInstanceConfig;
 import com.netflix.appinfo.InstanceInfo;
+import com.netflix.eureka.EurekaServerContext;
 import com.netflix.eureka.EurekaServerContextHolder;
 import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,22 +63,22 @@ public class TxServiceImpl implements TxService {
 
     @Override
     public TxServer getServer() {
-        List<String> urls= getServices();
+        List<String> urls = getServices();
         List<TxState> states = new ArrayList<>();
-        for(String url:urls){
-            TxState state = restTemplate.getForObject(url+"/tx/manager/state",TxState.class);
+        for (String url : urls) {
+            TxState state = restTemplate.getForObject(url + "/tx/manager/state", TxState.class);
             states.add(state);
         }
-        if(states.size()<=1) {
+        if (states.size() <= 1) {
             TxState state = getState();
             if (state.getMaxConnection() > state.getNowConnection()) {
                 return TxServer.format(state);
             } else {
                 return null;
             }
-        }else{
+        } else {
             //找默认数据
-            TxState state = getDefault(states,0);
+            TxState state = getDefault(states, 0);
             if (state == null) {
                 //没有满足的默认数据
                 return null;
@@ -102,8 +105,12 @@ public class TxServiceImpl implements TxService {
     @Override
     public TxState getState() {
         TxState state = new TxState();
-        String ipAddress = EurekaServerContextHolder.getInstance().getServerContext().getApplicationInfoManager().getEurekaInstanceConfig().getIpAddress();
-        if(!isIp(ipAddress)){
+        EurekaServerContextHolder holder = EurekaServerContextHolder.getInstance();
+        EurekaServerContext serverContext = holder.getServerContext();
+        ApplicationInfoManager infoManager = serverContext.getApplicationInfoManager();
+        EurekaInstanceConfig instanceConfig = infoManager.getEurekaInstanceConfig();
+        String ipAddress = instanceConfig.getIpAddress();
+        if (!isIp(ipAddress)) {
             ipAddress = "127.0.0.1";
         }
         state.setIp(ipAddress);
@@ -125,18 +132,16 @@ public class TxServiceImpl implements TxService {
     }
 
 
-
-
-    private List<String> getServices(){
+    private List<String> getServices() {
         List<String> urls = new ArrayList<>();
-        List<InstanceInfo> instanceInfos =discoveryService.getConfigServiceInstances();
+        List<InstanceInfo> instanceInfos = discoveryService.getConfigServiceInstances();
         for (InstanceInfo instanceInfo : instanceInfos) {
             String url = instanceInfo.getHomePageUrl();
             String address = instanceInfo.getIPAddr();
             if (isIp(address)) {
                 urls.add(url);
-            }else{
-                url = url.replace(address,"127.0.0.1");
+            } else {
+                url = url.replace(address, "127.0.0.1");
                 urls.add(url);
             }
         }
@@ -146,7 +151,7 @@ public class TxServiceImpl implements TxService {
 
     @Override
     public boolean checkClearGroup(String groupId, String taskId, int isGroup) {
-        return managerService.checkClearGroup(groupId,taskId,isGroup);
+        return managerService.checkClearGroup(groupId, taskId, isGroup);
     }
 
     @Override
@@ -155,7 +160,7 @@ public class TxServiceImpl implements TxService {
     }
 
     @Override
-    public String sendMsg(String model,String msg) {
+    public String sendMsg(String model, String msg) {
         JSONObject jsonObject = JSON.parseObject(msg);
         String key = jsonObject.getString("k");
 
@@ -173,8 +178,8 @@ public class TxServiceImpl implements TxService {
                     }
                 }
                 Channel channel = SocketManager.getInstance().getChannelByModelName(model);
-                if (channel != null &&channel.isActive()) {
-                    SocketUtils.sendMsg(channel,msg);
+                if (channel != null && channel.isActive()) {
+                    SocketUtils.sendMsg(channel, msg);
                 }
             }
         }).start();
@@ -185,7 +190,7 @@ public class TxServiceImpl implements TxService {
             @Override
             public void run() {
                 Task task = ConditionUtils.getInstance().getTask(key);
-                if(task!=null&&!task.isNotify()) {
+                if (task != null && !task.isNotify()) {
                     task.setBack(new IBack() {
                         @Override
                         public Object doing(Object... objs) throws Throwable {
@@ -203,10 +208,10 @@ public class TxServiceImpl implements TxService {
 
 
         try {
-            return  (String)task.getBack().doing();
+            return (String) task.getBack().doing();
         } catch (Throwable throwable) {
             return "-1";
-        }finally {
+        } finally {
             task.remove();
         }
     }
