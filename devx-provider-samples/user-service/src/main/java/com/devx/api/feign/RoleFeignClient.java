@@ -1,6 +1,6 @@
 package com.devx.api.feign;
 
-import com.devx.api.config.MyConfiguration;
+import com.devx.api.common.config.MyConfiguration;
 import com.devx.model.Role;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

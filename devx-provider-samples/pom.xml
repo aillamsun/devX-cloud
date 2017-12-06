@@ -17,6 +17,7 @@
         <module>logs-service</module>
         <module>menus-service</module>
         <module>role-service</module>
+        <module>common-service</module>
     </modules>
 
     <properties>

@@ -1,6 +1,6 @@
-package com.devx.api.interceptor;
+package com.devx.api.common.interceptor;
 
-import com.lorne.tx.springcloud.interceptor.TxManagerInterceptor;
+import com.codingapi.tx.springcloud.interceptor.TxManagerInterceptor;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

@@ -1,15 +1,13 @@
-package com.devx.api.config;
+package com.devx.api.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.lorne.tx.db.LCNDataSourceProxy;
+import com.codingapi.tx.datasource.relational.LCNTransactionDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
@@ -76,8 +74,8 @@ public class DruidDBConfig {
 
     @Bean     //声明其为Bean实例
 //    @Primary表示这里定义的DataSource将覆盖其他来源的DataSource
-    @Primary  //在同样的DataSource中，首先使用被标注的DataSource
-    public DataSource dataSource(){
+      //在同样的DataSource中，首先使用被标注的DataSource
+    public LCNTransactionDataSource dataSource(){
         DruidDataSource datasource = new DruidDataSource();
 
         datasource.setUrl(this.dbUrl);
@@ -106,7 +104,7 @@ public class DruidDBConfig {
         datasource.setConnectionProperties(connectionProperties);
 
 
-        LCNDataSourceProxy dataSourceProxy = new LCNDataSourceProxy();
+        LCNTransactionDataSource dataSourceProxy = new LCNTransactionDataSource();
         dataSourceProxy.setDataSource(datasource);
         dataSourceProxy.setMaxCount(10);
         return dataSourceProxy;

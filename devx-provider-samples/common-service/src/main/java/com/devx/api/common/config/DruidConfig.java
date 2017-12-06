@@ -1,4 +1,4 @@
-package com.devx.api.config;
+package com.devx.api.common.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;

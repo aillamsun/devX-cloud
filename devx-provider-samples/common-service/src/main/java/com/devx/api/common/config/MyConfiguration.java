@@ -1,6 +1,6 @@
-package com.devx.api.config;
+package com.devx.api.common.config;
 
-import com.lorne.tx.springcloud.feign.TransactionRestTemplateInterceptor;
+import com.codingapi.tx.springcloud.feign.TransactionRestTemplateInterceptor;
 import feign.Feign;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

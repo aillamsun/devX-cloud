@@ -20,9 +20,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.1991wangliang</groupId>
-            <artifactId>springcloud-transaction</artifactId>
-            <version>1.0.1</version>
+            <groupId>com.devx</groupId>
+            <artifactId>common-service</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

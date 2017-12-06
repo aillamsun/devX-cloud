@@ -23,4 +23,5 @@ public class DevxRoleServiceApp {
         SpringApplication.run(DevxRoleServiceApp.class, args);
     }
 
+
 }

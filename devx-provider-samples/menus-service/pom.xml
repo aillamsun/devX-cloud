@@ -12,4 +12,12 @@
     <artifactId>menus-service[菜单服务]</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.devx</groupId>
+            <artifactId>common-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>
