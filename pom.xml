@@ -22,6 +22,7 @@
         <module>devx-transaction-server</module>
         <module>devx-model</module>
         <module>devx-mapper</module>
+        <module>zipkin</module>
     </modules>
 
 
