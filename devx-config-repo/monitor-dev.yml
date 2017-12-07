@@ -2,41 +2,6 @@
 server:
   port: 8040
 
-# 安全配置
-security:
-  user:
-    name: admin
-    password: 123456
-    role: USER
-  basic:
-    enabled: true
-
-# eureka 配置
-eureka:
-  instance:
-    hostname: localhost
-    statusPageUrlPath: /info
-    healthCheckUrlPath: /health
-    #docker 部署开启
-    prefer-ip-address: false
-     #ip-address: 127.0.0.1
-    # 续约更新时间间隔（默认30秒）
-    lease-renewal-interval-in-seconds: 10
-    # 续约到期时间（默认90秒）
-    lease-expiration-duration-in-seconds: 30
-     # 自定义instance-id
-    instance-id: ${spring.application.name}:${server.port}:${random.value}
-  client:
-    service-url:
-      # defaultZone: http://localhost:8761/eureka/
-      # docker 部署开启
-      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8671/eureka/
-    healthcheck:
-      enabled: true
-    eurekaServiceUrlPollIntervalSeconds: 60
-    enabled: true
-
-
 logging:
   level:
     org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter: error
@@ -46,27 +11,11 @@ turbine:
     port: 8041
 
 spring:
-  rabbitmq:
-    host: rabbitmq
-    port: 5672
-    username: guest
-    password: guest
-
   boot:
       admin:
         routes:
           endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
         turbine:
           clusters: default
-          location: http://localhost:${turbine.stream.port}
-
-
-#actuator暴露的health接口权限是由两个配置:
-#actuator是否需要安全保证
-management:
-  security:
-    enabled: false
-#actuator的health接口是否需要安全保证
-endpoints:
-  health:
-    sensitive: false
+          location: turbine
+#          location: http://localhost:${turbine.stream.port}
