@@ -73,12 +73,12 @@ spring:
 
 
 
-authserver:
-    hostname: auth
-    port: 5000
-    contextPath: /uaa
-
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current
+#authserver:
+#    hostname: auth
+#    port: 5000
+#    contextPath: /uaa
+#
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current
