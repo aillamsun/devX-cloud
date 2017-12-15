@@ -8,7 +8,7 @@ import com.codingapi.tm.model.TxState;
  */
 public interface MicroService {
 
-    String  tmKey = "tx-manager";
+    String  tmKey = "transaction";
 
     TxServer getServer();
 

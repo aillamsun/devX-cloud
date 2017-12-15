@@ -23,7 +23,7 @@ public interface TxManagerService {
      * @return
      */
 
-    TxGroup addTransactionGroup(String groupId, String taskId,int isGroup, String modelName, String methodStr);
+    TxGroup addTransactionGroup(String groupId, String taskId, int isGroup, String modelName, String methodStr);
 
 
     /**
@@ -32,10 +32,10 @@ public interface TxManagerService {
      * @param state    事务状态
      * @return  0 事务存在补偿 1 事务正常  -1 事务强制回滚
      */
-    int closeTransactionGroup(String groupId,int state);
+    int closeTransactionGroup(String groupId, int state);
 
 
-    void dealTxGroup(TxGroup txGroup, boolean hasOk );
+    void dealTxGroup(TxGroup txGroup, boolean hasOk);
 
 
     /**

@@ -9,7 +9,7 @@ public interface LoadBalanceService {
 
     boolean put(LoadBalanceInfo loadBalanceInfo);
 
-    LoadBalanceInfo get(String groupId,String key);
+    LoadBalanceInfo get(String groupId, String key);
 
     boolean remove(String groupId);
 
